@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Irvine, OC, Cleveland NF Home Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./styles/irvine, oc, cleveland.css" />
+    <!-- Leaflet Maps-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <!-- Lightbox Gallery -->
+    <link rel="stylesheet" href="../css/lightbox.min.css" />
+    <script src="../scripts/vendor/lightbox-plus-jquery.min.js"></script>
+</head>
+
+<body>
+    <top-header></top-header>
+    <div class="site-container">
+        <home-pic></home-pic>
+        <area-nav-bar></area-nav-bar>
+        <h1 class="PageTitle" id="top">Irvine, OC, and the Cleveland National Forest</h1>
+        <div class="pagebodycontainer">
+        <div class="stickypagenav">
+            <ul>
+                <li><a href="#top">Top of Page</a></li>
+                <li><a href="#irvine_ranch">Irvine Ranch</a></li>
+                <li><a href="#ClevelandNF">Cleveland NF</a></li>
+                <li><a href="#north_trabuco">North Trabuco Ranger District</a></li>
+                <li><a href="#">South Cleveland NF</a></li>
+            </ul>
+        </div>
+        <div class="mainbodycontainer">
+            <div class="full_section" id="irvineoc">
+                <img src="./images/oc-vendor-images/Irvine the Sinks.jpg" alt="The Sinks in Irvine" class="inlineimage"> 
+                <!-- Figure out how to do captions later -->
+                <p>
+                    Irvine and Orange County are home to many beautiful and easy-to-access trails offering a quick escape from the suburbs and into nature. Most trails in Irvine fall under the jurisdiction of the <a href="https://letsgooutside.org/"  target="_blank">Irvine Ranch Conservatory</a>, the <a href="https://www.ocparks.com/" target="_blank">OC Parks System</a>, and a few are part of the <a href="https://www.parks.ca.gov/?page_id=21288" target="_blank">State Parks System</a>. 
+                </p>
+                <p>
+                    This section of the page starts with a map that details the trailheads of a few of the hikes I have taken in Irvine/OC
+                    as well as some recommended hikes I have yet to do.
+                </p>
+                <br>
+            </div>
+            <div class="full_subsection">
+                <h1>Map: Hike History and Recommended</h1>
+                <p>To operate the map and work with the table of completed hikes, simply click, drag, and scroll on the map to find trailhead entrances and route names. The table is color-coded, meaning that green-colored hikes are hikes that I have personally completed, while grey-colored hikes are routes that have been recommended to me and am looking to try out. You can also click on the table headings to sort the table.</p>
+                <div id="irvochikes"></div>
+                <div class="hike_rec_filters">
+                    Filter Map and Table by: 
+                    <label for="all"> All </label>
+                    <input type="checkbox" name="all" id="all" checked>
+                    <label for="completed"> &ensp;Completed Hikes </label>
+                    <input type="checkbox" name="completed" id="completed">
+                    <label for="uncompleted"> Incompleted </label>
+                    <input type="checkbox" name="incompleted" id="incompleted">
+                    &emsp;&emsp; | By Difficulty: 
+                    <label for="easy"> Easy </label>
+                    <input type="checkbox" name="Easy" id="Easy">
+                    <label for="Moderate"> Moderate </label>
+                    <input type="checkbox" name="Moderate" id="Moderate">
+                    <label for="Hard"> Hard </label>
+                    <input type="checkbox" name="Hard" id="Hard">
+                    <label for="Strenuous"> Strenuous </label>
+                    <input type="checkbox" name="Strenuous" id="Strenuous">
+                </div>
+                <div class="hike_table" >
+                    <table id="hike_history_recommended"></table>
+                </div>
+            </div>
+            <div class="two_thirds_subsection" id="irvine_ranch">
+                <h1>Irvine Ranch Natural Landmarks</h1>
+                <p>
+                    The Irvine Ranch natural landmarks essentially encompasses the majority of all the trails highlighted on the map above. Other than the Cleveland Nat'l Forest, __ borders the lands occupied by the parks in the table below. To reference the map on the right, hover over it to see the names of each space.
+                </p>
+                <p>Other than the public open-access trails listed below, <a href="https://letsgooutside.org/activities/">letsgooutside</a> allows you to register for hikes that are not open to the public like The Sinks, Hicks Haul Road, and more.</p>
+                <table class="subsection_info_table">
+                    <tr>
+                        <th>Area Name</th>
+                        <th>Jurisdiction</th>
+                        <th>Hours</th>
+                    </tr>
+                    <tr>
+                        <td>Bommer Canyon</td>
+                        <td><a href="http://letsgooutside.org/explore/bommer-canyon/">City of Irvine Open Space Preserve</a></td>
+                        <td>7 a.m. to sunset</td>
+                    </tr>
+                    <tr>
+                        <td>Buck Gully Reserve</td>
+                        <td><a href="http://letsgooutside.org/explore/buck-gully/">City of Newport Beach</a></td>
+                        <td>dawn to dusk</td>
+                    </tr>
+                    <tr>
+                        <td>Crystal Cove State Park</td>
+                        <td><a href="http://www.crystalcovestatepark.org/">CA State Parks</a></td>
+                        <td>6 a.m. to sunset</td>
+                    </tr>
+                    <tr>
+                        <td>Laguna Coast Wilderness Park</td>
+                        <td><a href="http://www.ocparks.com/lagunacoast/">OC Parks</a></td>
+                        <td>7 a.m. to sunset</td>
+                    </tr>
+                    <tr>
+                        <td>Peters Canyon Regional Park</td>
+                        <td><a href="http://www.ocparks.com/lagunacoast/">OC Parks</a></td>
+                        <td>7 a.m. to sunset</td>
+                    </tr>
+                    <tr>
+                        <td>Quail Hill</td>
+                        <td><a href="http://letsgooutside.org/explore/quail-hill/">City of Irvine Open Space Preserve</a></td>
+                        <td>7 a.m. to sunset</td>
+                    </tr>
+                    <tr>
+                        <td>Santiago Oaks Reg Park</td>
+                        <td><a href="http://ocparks.com/parks/santiago">OC Parks</a></td>
+                        <td>7 a.m. to sunset</td>
+                    </tr>
+                    <tr>
+                        <td>Whiting Ranch Wilderness Park</td>
+                        <td><a href="http://ocparks.com/parks/santiago">OC Parks</a></td>
+                        <td>7 a.m. to sunset</td>
+                        </tr>
+                </table>
+            </div>
+            <div class = "col_expanding_img">
+                <img src="./images/oc-vendor-images/IRNLMap.jpg" alt="Irvine Ranch Nat'l Landmarks" />
+            </div>
+            <div class="full_section" id="ClevelandNF">
+                <div class="mainbodyimage">
+                    <img src="./images/oc-vendor-images/Cleveland NF nature.jpg" alt="Cleveland NF Nature image" class="inlineimage"/>
+                </div>
+                <p>
+                    The Cleveland National Forest is part of the National Forest system. As such, an Adventure Pass is required to park at any developed parking lot that accesses the park. There are three main regions of Cleveland NF. The <a href="https://www.fs.usda.gov/detail/cleveland/home/?cid=FSEPRD477258">Trabuco Ranger District</a> encompasses the Santa Ana Mountains in Riverside and Orange County. It is bounded by the CA 91 freeway in the north and the CA 74 freeway provides access to the Southern half of this region. The <a href="#">Palomar Ranger District</a> is located to the southwest of San Jacinto NF between Pala and Warner Springs, Aguana and Ramona. Lastly, the <a href="#">Descanso Ranger District</a> is located in San Diego County. It houses the first miles of the Pacific Crest Trail.
+                </p>
+                <p>For more information, check out their <a href="https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprdb5277346.pdf">Visitor's Guide</a>.</p>
+                <h1>Quick Facts</h1>
+                <div class="quickfacts">
+                    <div class="fire_danger" id="fire">
+                        <h2>Fire Danger Level</h2>
+                        <p>Please see: <a href="https://www.fs.usda.gov/detail/cleveland/landmanagement/resourcemanagement/?cid=fsbdev7_016451" target="_blank">Cleveland Fire FAQs</a> and <a href="https://www.fs.usda.gov/detail/angeles/conditions/?cid=FSBDEV3_027721" target="_blank">Angeles Fire Condition Restrictions</a> for more information.</p>
+                        <br>
+                        <h2>Permit Information</h2>
+                        <p>Information about wilderness (camping on unestablished areas) permits and other permits can be found <a href="https://www.fs.usda.gov/main/cleveland/passes-permits/recreation#wilderness" target="_blank">here</a>.</p>
+                        <br>
+                        <h2>Trails to Explore</h2>
+                        <p>A list of recommended trails from the USFS website can be found <a href="https://www.fs.usda.gov/detailfull/cleveland/recreation/?cid=stelprd3844629&width=full" target="_blank">here</a>.</p>
+                    </div>
+                    <div class="alerts">
+                        <h2>Alerts and Closures</h2>
+                        <p>Here are resources to determine the alerts and closures related to Cleveland NF:
+                            <ul>
+                                <li>The <a href="https://www.fs.usda.gov/main/cleveland/home" target="_blank">home page</a> contains general alerts/notices.</li>
+                                <li><a href="https://www.fs.usda.gov/recmain/cleveland/recreation" target="_blank">Recreation Sites</a></li>
+                                <li><a href="https://www.fs.usda.gov/detailfull/cleveland/alerts-notices/?cid=stelprdb5340229" target="_blank">Road and trail closures</a></li>
+                            </ul>
+                        </p>
+
+                    </div>
+                    <div class="twitter">
+                        <a class="twitter-timeline" data-height="600" data-theme="light"
+                        href="https://twitter.com/ClevelandNF?ref_src=twsrc%5Etfw">Tweets by ClevelandNF</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </div>
+            </div>
+            <div id="nf_area_map"></div>
+            <span id="dynamic_map_nav" class="map-navigation">
+                <p>Click the links to re-center the above map to the desired destinations.</p>
+            </span>
+            <div class="full_subsection" id="north_trabuco">
+                <h1>Trabuco Ranger District</h1>
+                <p>The <a href="https://www.fs.usda.gov/detail/cleveland/home/?cid=FSEPRD477258">Trabuco Ranger District</a> is the Northernmost wilderness district of the Cleveland National Forest and borders Orange County (Irvine, Rancho Santa Margarita, Corona, etc.) and contains many quickly accessible trails for OC and West Inland-Empire residents. In this section, we will split the Trabuco Ranger District into two parts: North and South.</p>
+                <p>The North Trabuco Ranger District is everything accessible north of the Ortega CA 74 freeway. The South Trabuco Ranger District is everything accessible from the Ortega CA 74 freeway and south.</p>
+                <p>First, here are the quick facts about the Trabuco Ranger District in general:</p>
+                <table class="subsection_info_table">
+                    <tr>
+                        <td>District Ranger</td>
+                        <td>Darrell Vance</td>
+                    </tr>
+                    <tr>
+                        <td>Contact Number</td>
+                        <td>951-736-1811</td>
+                    </tr>
+                    <tr>
+                        <td>Dispersed Camping?</td>
+                        <td>Yes, only in San Mateo Canyon Wilderness, permit required.</td>
+                    </tr>
+                    <tr>
+                        <td>Hidden Gem</td>
+                        <td><a href="http://www.fs.usda.gov/recarea/cleveland/recreation/hiking/recarea/?recid=81640&actid=50">Santiago Peak</a></td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td>1147 East Sixth Street. Corona CA 92879</td>
+                    </tr>
+                    <tr>
+                        <td>District Email</td>
+                        <td>SM.FS.TrabucoRD@usda.gov</td>
+                    </tr>
+                    <tr>
+                        <td>Hours of Operation</td>
+                        <td>8:00am to 4:30pm - Monday through Friday</td>
+                    </tr>
+                    <tr>
+                        <td>Source of Information</td>
+                        <td><a href="https://www.fs.usda.gov/detail/cleveland/home/?cid=FSEPRD477258">Check here for discrepancies</a></td>
+                    </tr>
+                </table>
+                <div class="gallery">
+                    <a href="./images/oc-vendor-images/Trabuco Gallery/Trabuco Developed Sites.png" data-lightbox="trabuco_gallery" data-title="Trabuco Developed Sites"><img src="./images/oc-vendor-images/Trabuco Gallery/Trabuco Developed Sites.png" alt="Trabuco Developed Sites"></a>
+                    <a href="./images/oc-vendor-images/Trabuco Gallery/Trabuco Trails.png" data-lightbox="trabuco_gallery" data-title="Trabuco Trails"><img src="./images/oc-vendor-images/Trabuco Gallery/Trabuco Trails.png" alt="Trabuco Trails"></a>
+                    <a href="./images/oc-vendor-images/Trabuco Gallery/Visitors Guide Map.png" data-lightbox="trabuco_gallery" data-title="Trabuco Map"><img src="./images/oc-vendor-images/Trabuco Gallery/Visitors Guide Map.png" alt="Map"></a>
+                    <a href="./images/oc-vendor-images/Trabuco Gallery/Visitors Guide Map Expanded Area.png" data-lightbox="trabuco_gallery" data-title="Trabuco Map Expanded Area"><img src="./images/oc-vendor-images/Trabuco Gallery/Visitors Guide Map Expanded Area.png" alt="Expanded Area"></a>
+                </div>
+            </div>
+        
+        </div>
+        </div>
+    </div>
+    <footer-container></footer-container>
+    <bottom-footer></bottom-footer>
+
+    <script type = "module" src="./scripts/render/render-all.js"></script>
+    <script type="module" src="./scripts/utils/oc-cleveland.js"></script>
+    <script src="../scripts/vendor/papaparse.min.js"></script>
+</body>
+
+</html>

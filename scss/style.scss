@@ -1,0 +1,25 @@
+@import "./config";
+@import "./pagehead";
+@import "./mainbody";
+@import "./homesection";
+@import "./footer";
+@import "./areainfopage";
+@import "./stickypagenav";
+@import "./hiketable";
+@import "./quickfacts";
+@import "./gallery";
+@import "./mapnav";
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background: $polished-pine;
+}
+
+/* Container for the content of the page */
+.site-container {
+  background: $queen-pink;
+  box-sizing: border-box;
+}

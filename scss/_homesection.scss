@@ -1,0 +1,26 @@
+//Sections inside the homepage
+/* Section Specific Formatting */
+.aboutsite {
+  grid-column: 1/3;
+
+  &::before {
+    content: "About Site";
+  }
+}
+
+.aboutme {
+  img {
+    object-position: top-left;
+  }
+
+  &::before {
+    content: "About Me";
+  }
+}
+
+.mainbodycontainer > .latestupdate::before {
+  content: "Latest Update";
+}
+.mainbodycontainer > .featpost::before {
+  content: "Featured Post";
+}

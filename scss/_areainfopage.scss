@@ -1,0 +1,87 @@
+/* Page-Shared Styles */
+.PageTitle {
+  font-family: $myCursivefont;
+  color: $lighterblack;
+  margin: 1rem 0rem 0.3rem;
+  font-size: 2.25rem;
+}
+
+.pagebodycontainer {
+  display: flex;
+
+  .mainbodycontainer {
+    div::before {
+      text-align: left;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.inlineimage {
+  margin: 0.2rem;
+  width: 50%;
+  /* position: relative; */
+  /* display: inline-block; */
+  float: right;
+}
+
+/* Page-related Classes */
+.full_section {
+  grid-column: 1/4;
+}
+
+.full_subsection {
+  grid-column: 1/4;
+
+  h1 {
+    text-align: left;
+  }
+
+  &::before {
+    display: none;
+  }
+}
+
+.two_thirds_subsection {
+  grid-column: 1/3;
+}
+.mainbodycontainer > .two_thirds_subsection::before {
+  display: none;
+}
+/* Irvine Ranch Nat'l Landmarks */
+.col_expanding_img {
+  grid-column: 3/4;
+  z-index: 1;
+  img {
+    width: 100%;
+    &:hover {
+      transform: scale(2.25) translate(-2rem, 4em);
+      z-index: 1;
+    }
+  }
+  &::before {
+    display: none;
+  }
+}
+
+.subsection_info_table {
+  margin: 0;
+  font-family: $myReadingfont;
+  border-collapse: collapse;
+  width: 100%;
+  z-index: 0;
+
+  td,
+  th {
+    text-align: left;
+    padding: 0.1em;
+  }
+  th {
+    font-weight: bold;
+    background: white;
+    font-size: 1.2rem;
+  }
+  tr:nth-child(odd) {
+    background-color: $light-grey;
+  }
+}

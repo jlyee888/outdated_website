@@ -1,0 +1,46 @@
+.stickypagenav {
+  padding-right: 0.3rem;
+
+  ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+  }
+  li {
+    display: inline-block;
+    width: 100%;
+    line-height: 1;
+    margin: 0;
+    padding: 0 0.1rem 0;
+    flex-grow: 1;
+    background: $lighterblack;
+
+    &:hover {
+      background: $french-sky-blue;
+    }
+  }
+  a {
+    /* Text*/
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    text-align: left;
+    font-family: $myTitlefont;
+
+    color: white;
+    /* Thickness of Boxes*/
+    padding: 0.75rem 0.1rem 0.75rem;
+    margin: 0 auto;
+    /*  */
+    display: inline-block;
+    box-sizing: border-box;
+  }
+}

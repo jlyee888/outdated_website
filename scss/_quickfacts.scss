@@ -1,0 +1,26 @@
+.quickfacts {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  column-gap: 0.2rem;
+  /* grid-template-rows: ; */
+  background: $light-grey;
+  border-spacing: 0.2rem;
+  padding: 0.5rem;
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  tr:nth-child(odd) {
+    background-color: $light-grey;
+  }
+  img {
+    width: 85%;
+  }
+}
+
+// .tableTitle {
+//   font-size: 1.25rem;
+//   background: $queen-pink;
+// }

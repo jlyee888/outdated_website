@@ -1,0 +1,51 @@
+/* Hike Table */
+.hike_table {
+  /* The scrollable part */
+  height: 45vh;
+  overflow-y: scroll;
+  border-bottom: 1px solid #ddd;
+  font-family: $myReadingfont;
+  font-size: 1rem;
+
+  th {
+    position: sticky;
+    background-color: white;
+    z-index: 2;
+    top: 0;
+  }
+  .th.fixed {
+    top: 0;
+    z-index: 2;
+    position: sticky;
+    background-color: white;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    z-index: 0;
+  }
+
+  th {
+    cursor: pointer;
+  }
+
+  td,
+  th {
+    text-align: left;
+    padding: 8px;
+  }
+
+  .completed:nth-child(even) {
+    background-color: $polished-pine;
+  }
+  .completed:nth-child(odd) {
+    background-color: $lighter-polished-pine;
+  }
+  .incompleted:nth-child(odd) {
+    background-color: #ddd;
+  }
+  .notescol {
+    font-size: 0.8rem;
+  }
+}

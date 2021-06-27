@@ -1,0 +1,492 @@
+/* To be applied to all web pages as a general stylesheet */
+
+/* General Base Settings for the Page */
+:root {
+  /* Main Colors */
+  --french-sky-blue: #67aaf9ff;
+  --cream: #f3ffbdff;
+  --polished-pine: rgb(107, 175, 152);
+  --natureblue: #3a5683ff;
+  --queen-pink: rgb(255, 238, 238);
+  --light-grey: rgb(231, 231, 231);
+  /* old: #eac8caff; */
+  --lighterblack: #222;
+  /* My Fonts */
+  --myTitlefont: "Kumbh Sans", sans-serif;
+  --myReadingfont: "Cormorant Garamond", serif;
+  --myCursivefont: "Pacifico", cursive;
+  /* My Margins and Padding */
+  --bodyfootersmallscreenmargin: 2.5rem 2.5rem 1rem;
+  --bodyfootersmallscreenpadding: 2rem 2rem 2rem;
+  --bodyfooterlargescreenmargin: 3rem 8rem 1rem;
+  --bodyfooterlargescreenpadding: 2rem 4rem 2rem;
+}
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background: var(--polished-pine);
+}
+/* Topmost Header */
+header {
+  text-align: center;
+  color: var(--cream);
+  font-size: 1.4rem;
+  font-family: var(--myCursivefont);
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  background: var(--lighterblack);
+  box-sizing: border-box;
+}
+header a {
+  text-decoration: none;
+  color: var(--cream);
+}
+/* Container for the content of the page */
+.site-container {
+  background: var(--queen-pink);
+  box-sizing: border-box;
+}
+@media screen and (min-width: 0px) {
+  /* Note to self: the footer and the .site-container both follow each other in terms of margin and padding. May be worthwhile to hold vars for this. */
+  .site-container {
+    margin: var(--bodyfootersmallscreenmargin);
+    padding: var(--bodyfootersmallscreenpadding);
+  }
+}
+@media screen and (min-width: 950px) {
+  .site-container {
+    margin: var(--bodyfooterlargescreenmargin);
+    padding: var(--bodyfooterlargescreenpadding);
+  }
+}
+
+.homepicheader > a > img {
+  width: 30%;
+  height: auto;
+  max-height: 10rem;
+  /* Have to rework the image to make it better */
+}
+
+/* Nav bar */
+nav ul {
+  list-style-type: none;
+  width: 100%;
+  margin: 1rem 0rem 0rem 0rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+nav li {
+  display: inline-block;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  background: var(--lighterblack);
+}
+nav li:hover {
+  background: var(--french-sky-blue);
+  /* Add dropdown stuff here */
+}
+nav a {
+  /* Text*/
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  text-align: left;
+  font-family: var(--myTitlefont);
+
+  color: white;
+  /* Thickness of Boxes*/
+  padding: 0.75rem;
+  margin: 0 auto;
+  /*  */
+  display: inline-block;
+  box-sizing: border-box;
+}
+/* Arrows */
+.arrow {
+  border: solid white;
+  border-width: 0 0.2rem 0.2rem 0;
+  display: inline-block;
+  padding: 0.2rem;
+  margin: 0.2rem 0.5rem 0.2rem;
+}
+.up {
+  transform: rotate(-135deg);
+  transform: translateX(0.3rem);
+  -webkit-transform: rotate(-135deg);
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* Main Body Container */
+.mainbodycontainer {
+  background: lightgrey;
+  padding: 1em;
+  /* Text Settings */
+  font-family: var(--myReadingfont);
+  /* Grid Settings */
+  display: grid;
+  /* grid-template-columns: 30% 30% 40%; */
+  grid-template-columns: 1fr 1fr 1fr;
+  /* Shorthand: grid-template-column:repeat(2, 1fr 2fr) */
+  grid-gap: 1em;
+  grid-auto-rows: minmax(2rem, auto);
+  /* align and justify look up if needed */
+}
+/* General Formatting */
+/* Header to each section block */
+.mainbodycontainer > div::before {
+  content: "Section Title";
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--myTitlefont);
+  color: var(--lighterblack);
+  display: block;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  border-bottom: 0.2rem dotted var(--lighterblack);
+}
+/* Image Before each Section */
+.mainbodyimage > img {
+  margin-left: 0;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+.mainbodycontainer p {
+  font-size: 1.1rem;
+  text-indent: 0.5rem;
+}
+/* Section Specific Formatting */
+.aboutsite {
+  grid-column: 1/3;
+}
+.mainbodycontainer > .aboutsite::before {
+  content: "About Site";
+}
+/* .aboutme {
+} */
+.aboutme img {
+  object-position: top-left;
+}
+.mainbodycontainer > .aboutme::before {
+  content: "About Me";
+}
+.mainbodycontainer > .latestupdate::before {
+  content: "Latest Update";
+}
+.mainbodycontainer > .featpost::before {
+  content: "Featured Post";
+}
+
+/* FooterContainer */
+@media screen and (min-width: 0px) {
+  .footercontainer .mainbodycontainer {
+    margin: var(--bodyfootersmallscreenmargin);
+    padding: var(--bodyfootersmallscreenpadding);
+    background: var(--queen-pink);
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 950px) {
+  .footercontainer .mainbodycontainer {
+    margin: var(--bodyfooterlargescreenmargin);
+    padding: var(--bodyfooterlargescreenpadding);
+    background: var(--queen-pink);
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+    font-size: 1rem;
+  }
+}
+
+.footercontainer > .mainbodycontainer > div::before {
+  font-size: 1rem;
+}
+.footercontainer h1 {
+  font-size: 1.35rem;
+}
+.mainbodycontainer > .footercol1::before {
+  content: "Website Updates";
+}
+.mainbodycontainer > .footercol2::before,
+.mainbodycontainer > .footercol3::before {
+  opacity: 0;
+  /* Can fill stuff in here if I find anything */
+}
+.mainbodycontainer > .footercol2,
+.mainbodycontainer > .footercol3 {
+  opacity: 0;
+  /* Similarly Here */
+}
+
+footer {
+  text-align: center;
+  color: var(--cream);
+  font-size: 1rem;
+  font-family: var(--myTitlefont);
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  background: var(--lighterblack);
+  box-sizing: border-box;
+}
+footer a {
+  text-decoration: none;
+  color: var(--cream);
+}
+
+/* Page-Shared Styles */
+.PageTitle {
+  font-family: var(--myCursivefont);
+  color: var(--lighterblack);
+  margin: 1rem 0rem 0.3rem;
+  font-size: 2.25rem;
+}
+
+.pagebodycontainer {
+  display: flex;
+}
+
+.stickypagenav {
+  padding-right: 0.3rem;
+}
+.stickypagenav ul {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+}
+.stickypagenav li {
+  display: inline-block;
+  width: 100%;
+  line-height: 1;
+  margin: 0;
+  padding: 0 0.1rem 0;
+  flex-grow: 1;
+  background: var(--lighterblack);
+}
+.stickypagenav li:hover {
+  background: var(--french-sky-blue);
+  /* Add dropdown stuff here */
+}
+.stickypagenav a {
+  /* Text*/
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  text-align: left;
+  font-family: var(--myTitlefont);
+
+  color: white;
+  /* Thickness of Boxes*/
+  padding: 0.75rem 0.1rem 0.75rem;
+  margin: 0 auto;
+  /*  */
+  display: inline-block;
+  box-sizing: border-box;
+}
+.pagebodycontainer > .mainbodycontainer > div::before {
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.inlineimage {
+  margin: 0.2rem;
+  width: 50%;
+  /* position: relative; */
+  /* display: inline-block; */
+  float: right;
+}
+
+/* Page-related Classes */
+.full_section {
+  grid-column: 1/4;
+}
+
+.full_subsection {
+  grid-column: 1/4;
+}
+.full_section > h1 {
+  text-align: left;
+}
+.mainbodycontainer .full_subsection::before {
+  display: none;
+}
+
+/* Hike Table */
+.hike_table > table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  z-index: 0;
+}
+.hike_table th {
+  cursor: pointer;
+}
+.hike_table td,
+th {
+  text-align: left;
+  padding: 8px;
+}
+/* rgb(113, 179, 157) polished pine */
+.hike_table .completed:nth-child(even) {
+  background-color: rgb(113, 179, 157);
+}
+.hike_table .completed:nth-child(odd) {
+  background-color: rgb(178, 233, 215);
+}
+.hike_table .incompleted:nth-child(odd) {
+  background-color: #ddd;
+}
+.hike_table .notescol {
+  font-size: 0.8rem;
+}
+/* The scrollable part */
+.hike_table {
+  height: 45vh;
+  overflow-y: scroll;
+  border-bottom: 1px solid #ddd;
+  font-family: var(--myReadingfont);
+  font-size: 1rem;
+}
+.hike_table th {
+  position: sticky;
+  background-color: white;
+  z-index: 2;
+  top: 0;
+}
+.hike_table .th.fixed {
+  top: 0;
+  z-index: 2;
+  position: sticky;
+  background-color: white;
+}
+
+.two_thirds_subsection {
+  grid-column: 1/3;
+}
+.mainbodycontainer > .two_thirds_subsection::before {
+  display: none;
+}
+/* Irvine Ranch Nat'l Landmarks */
+.col_expanding_img {
+  grid-column: 3/4;
+  z-index: 1;
+}
+.col_expanding_img > img {
+  width: 100%;
+}
+.mainbodycontainer > .col_expanding_img::before {
+  display: none;
+}
+.col_expanding_img > img:hover {
+  transform: scale(2.25) translate(-2rem, 4em);
+  z-index: 1;
+}
+
+.subsection_info_table {
+  margin: 0;
+}
+.subsection_info_table > table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  z-index: 0;
+}
+
+.subsection_info_table td,
+th {
+  text-align: left;
+  padding: 0.1em;
+}
+.subsection_info_table th {
+  font-weight: bold;
+  background: white;
+  font-size: 1.2rem;
+}
+.subsection_info_table tr:nth-child(odd) {
+  background-color: var(--light-grey);
+}
+
+.quickfacts {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  column-gap: 0.2rem;
+  /* grid-template-rows: ; */
+  background: var(--light-grey);
+  border-spacing: 0.2rem;
+  padding: 0.5rem;
+}
+.quickfacts > h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+.tableTitle {
+  font-size: 1.25rem;
+  background: var(--queen-pink);
+}
+.quickfacts tr:nth-child(odd) {
+  background-color: var(--light-grey);
+}
+
+.gallery {
+  margin: 0.5rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--light-grey);
+}
+.gallery img {
+  transition: 0.75s;
+  padding: 0.5rem;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+#map-navigation::before {
+  display: none;
+}
+.map-navigation::before {
+  display: none;
+}
+.map-navigation {
+  background-color: var(--light-grey);
+  grid-column: 1/4;
+  margin: 0;
+}
+
+#nf_area_map::before {
+  display: none;
+}
+#nf_area_map {
+  width: 100%;
+  height: 85vh;
+  grid-column: 1/4;
+}

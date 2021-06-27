@@ -1,0 +1,16 @@
+/* Irvine, OC and Cleveland NF Specific */
+#irvochikes {
+  width: 100%;
+  height: 50vh;
+  /* min-height: 400px; */
+}
+.mainbodycontainer > #irvineoc::before {
+  content: "Irvine and Orange County";
+}
+#irvine_ranch img {
+  object-position: top-left;
+}
+/* Cleveland NF */
+.mainbodycontainer > #ClevelandNF::before {
+  content: "Cleveland National Forest";
+}

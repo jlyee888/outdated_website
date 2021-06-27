@@ -1,0 +1,10 @@
+Outdoor Adventure Website
+- will have html for the opening page, about-me, sitemap, acknowledgements etc.
+- will have the shared css
+
+Sub-website 1: Area Information Pages
+- holds imgs, styles, scripts, etc. for the five NFs 
+
+Sub-website 2: Blog/Hike Log Pages
+
+Sub-website 3: "Other" Web App Page for planning hikes

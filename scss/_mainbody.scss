@@ -1,0 +1,39 @@
+/* Main Body Container */
+.mainbodycontainer {
+  background: lightgrey;
+  padding: 1em;
+  /* Text Settings */
+  font-family: $myReadingfont;
+  /* Grid Settings */
+  display: grid;
+  /* grid-template-columns: 30% 30% 40%; */
+  grid-template-columns: 1fr 1fr 1fr;
+  /* Shorthand: grid-template-column:repeat(2, 1fr 2fr) */
+  grid-gap: 1em;
+  grid-auto-rows: minmax(2rem, auto);
+  /* align and justify look up if needed */
+
+  div::before {
+    // content: "Section Title";
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $myTitlefont;
+    color: $lighterblack;
+    display: block;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    border-bottom: 0.2rem dotted $lighterblack;
+  }
+  img {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  p {
+    font-size: 1.1rem;
+    text-indent: 0.5rem;
+  }
+}

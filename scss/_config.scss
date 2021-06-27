@@ -1,0 +1,59 @@
+//Config.scss Contains
+// Variables
+// Media Changes (for now, probably will make a new file later)
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Pacifico&family=Cormorant+Garamond:wght@600&display=swap");
+/* Main Colors */
+$french-sky-blue: #67aaf9ff;
+$cream: #f3ffbdff;
+$polished-pine: rgb(107, 175, 152);
+$lighter-polished-pine: rgb(178, 233, 215);
+$natureblue: #3a5683ff;
+$queen-pink: rgb(255, 238, 238);
+$light-grey: rgb(231, 231, 231);
+/* old: #eac8caff; */
+$lighterblack: #222;
+/* My Fonts */
+$myTitlefont: "Kumbh Sans", sans-serif;
+$myReadingfont: "Cormorant Garamond", serif;
+$myCursivefont: "Pacifico", cursive;
+/* My Margins and Padding */
+$bodyfootersmallscreenmargin: 2.5rem 2.5rem 1rem;
+$bodyfootersmallscreenpadding: 2rem 2rem 2rem;
+$bodyfooterlargescreenmargin: 3rem 8rem 1rem;
+$bodyfooterlargescreenpadding: 2rem 4rem 2rem;
+
+@media screen and (min-width: 0px) {
+  /* Note to self: the footer and the .site-container both follow each other in terms of margin and padding. May be worthwhile to hold vars for this. */
+  .site-container {
+    margin: $bodyfootersmallscreenmargin;
+    padding: $bodyfootersmallscreenpadding;
+  }
+}
+@media screen and (min-width: 950px) {
+  .site-container {
+    margin: $bodyfooterlargescreenmargin;
+    padding: $bodyfooterlargescreenpadding;
+  }
+}
+
+/* FooterContainer */
+@media screen and (min-width: 0px) {
+  .footercontainer .mainbodycontainer {
+    margin: $bodyfootersmallscreenmargin;
+    padding: $bodyfootersmallscreenpadding;
+    background: $queen-pink;
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 950px) {
+  .footercontainer .mainbodycontainer {
+    margin: $bodyfooterlargescreenmargin;
+    padding: $bodyfooterlargescreenpadding;
+    background: $queen-pink;
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+    font-size: 1rem;
+  }
+}

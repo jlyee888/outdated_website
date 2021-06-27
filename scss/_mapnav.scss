@@ -1,0 +1,23 @@
+#map-navigation::before {
+  display: none;
+}
+
+.map-navigation {
+  background-color: $light-grey;
+  grid-column: 1/4;
+  margin: 0;
+
+  &::before {
+    display: none;
+  }
+}
+
+#nf_area_map {
+  width: 100%;
+  height: 85vh;
+  grid-column: 1/4;
+
+  &::before {
+    display: none;
+  }
+}

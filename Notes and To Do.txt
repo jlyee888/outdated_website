@@ -1,0 +1,17 @@
+Fire Levels: 
+- Instead of the actual description, record what the restrictions are on use (not sure what the website is)
+https://www.fs.usda.gov/detail/angeles/conditions/?cid=FSBDEV3_027721
+https://www.fs.usda.gov/detail/cleveland/home/?cid=fseprd821880 
+Reorganize Files (pain in the ass)
+
+
+/*
+Old Thunderforest Map
+  // Attributions
+const attribution =
+    'Maps &copy <a href="https://www.thunderforest.com/">Thunderforest</a>, Data &copy <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>';
+  // Tiles
+const tileURL =
+    "https://tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=52cedd129e12460f9eec01783207adc8";
+const tiles = L.tileLayer(tileURL, { attribution });
+*/
